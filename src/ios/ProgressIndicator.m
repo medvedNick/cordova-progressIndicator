@@ -23,7 +23,7 @@
     
     // Check if dim : true ? false
     if (dim == true) {
-        self.progressIndicator.dimBackground = YES;
+        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleBlur;
     }
     
     // Cordova success
@@ -48,13 +48,13 @@
     self.progressIndicator = nil;
     self.progressIndicator = [MBProgressHUD showHUDAddedTo:self.webView.superview animated:YES];
     self.progressIndicator.mode = MBProgressHUDModeIndeterminate;
-    self.progressIndicator.labelText = text;
+    self.progressIndicator.label.text = text;
     //self.progressIndicator.color =  [UIColor color:color];
     //HUD.color = [UIColor colorWithRed:0.23 green:0.50 blue:0.82 alpha:0.90];
     
     // Check if dim : true ? false
     if (dim == true) {
-        self.progressIndicator.dimBackground = YES;
+        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleBlur;
     }
     
     CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
@@ -78,14 +78,14 @@
     self.progressIndicator = nil;
     self.progressIndicator = [MBProgressHUD showHUDAddedTo:self.webView.superview animated:YES];
     self.progressIndicator.mode = MBProgressHUDModeIndeterminate;
-    self.progressIndicator.labelText = text;
-    self.progressIndicator.detailsLabelText = detail;
+    self.progressIndicator.label.text = text;
+    self.progressIndicator.detailsLabel.text = detail;
     //self.progressIndicator.color =  [UIColor color:color];
     //HUD.color = [UIColor colorWithRed:0.23 green:0.50 blue:0.82 alpha:0.90];
     
     // Check for dim : true ? false
     if (dim == true) {
-        self.progressIndicator.dimBackground = YES;
+        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleBlur;
     }
     
     CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
@@ -111,7 +111,7 @@
     self.progressIndicator = nil;
     self.progressIndicator = [MBProgressHUD showHUDAddedTo:self.webView.superview animated:YES];
     self.progressIndicator.mode = MBProgressHUDModeText;
-    self.progressIndicator.labelText = text;
+    self.progressIndicator.label.text = text;
 	self.progressIndicator.margin = 10.f;
     
     
@@ -130,7 +130,7 @@
     
     // Check for dim : true ? false
     if (dim == true) {
-        self.progressIndicator.dimBackground = YES;
+        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleBlur;
     }
     
     CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
@@ -160,7 +160,7 @@
     
     // Check for dim : true ? false
     if (dim == true) {
-        self.progressIndicator.dimBackground = YES;
+        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleBlur;
     }
     
     // Load Progress bar with ::incrementValue
@@ -188,11 +188,11 @@
     self.progressIndicator = nil;
     self.progressIndicator = [MBProgressHUD showHUDAddedTo:self.webView.superview animated:YES];
     self.progressIndicator.mode = MBProgressHUDModeDeterminate;
-    self.progressIndicator.labelText = text;
+    self.progressIndicator.label.text = text;
     
     // Check for dim : true ? false
     if (dim == true) {
-        self.progressIndicator.dimBackground = YES;
+        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleBlur;
     }
     
     // Load Progress bar with ::incrementValue
@@ -222,7 +222,7 @@
     
     // Check for dim : true ? false
     if (dim == true) {
-        self.progressIndicator.dimBackground = YES;
+        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleBlur;
     }
     
     // Load Progress bar with ::incrementValue
@@ -249,11 +249,11 @@
     self.progressIndicator = nil;
     self.progressIndicator = [MBProgressHUD showHUDAddedTo:self.webView.superview animated:YES];
     self.progressIndicator.mode = MBProgressHUDModeAnnularDeterminate;
-    self.progressIndicator.labelText = text;
+    self.progressIndicator.label.text = text;
     
     // Check for dim : true ? false
     if (dim == true) {
-        self.progressIndicator.dimBackground = YES;
+        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleBlur;
     }
     
     // Load Progress bar with ::incrementValue
@@ -284,7 +284,7 @@
     
     // Check for dim : true ? false
     if (dim == true) {
-        self.progressIndicator.dimBackground = YES;
+        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleBlur;
     }
     
     // Load Progress bar with ::incrementValue
@@ -312,12 +312,12 @@
     self.progressIndicator = nil;
     self.progressIndicator = [MBProgressHUD showHUDAddedTo:self.webView.superview animated:YES];
     self.progressIndicator.mode = MBProgressHUDModeDeterminateHorizontalBar;
-    self.progressIndicator.labelText = text;
+    self.progressIndicator.label.text = text;
     
     
     // Check for dim : true ? false
     if (dim == true) {
-        self.progressIndicator.dimBackground = YES;
+        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleBlur;
     }
     
     // Load Progress bar with ::incrementValue
@@ -342,7 +342,7 @@
     self.progressIndicator = nil;
     self.progressIndicator = [MBProgressHUD showHUDAddedTo:self.webView.superview animated:YES];
     self.progressIndicator.mode = MBProgressHUDModeCustomView;
-    self.progressIndicator.labelText = text;
+    self.progressIndicator.label.text = text;
     
     // custom success image from bundle
     NSString *image = @"ProgressIndicator.bundle/37x-Checkmark.png";
@@ -351,7 +351,7 @@
     
     // Check for dim : true ? false
     if (dim == true) {
-        self.progressIndicator.dimBackground = YES;
+        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleBlur;
     }
     
     CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
@@ -375,7 +375,7 @@
  self.progressIndicator = nil;
  self.progressIndicator = [MBProgressHUD showHUDAddedTo:self.webView.superview animated:YES];
  self.progressIndicator.mode = MBProgressHUDModeCustomView;
- self.progressIndicator.labelText = text;
+ self.progressIndicator.label.text = text;
  
  // custom success image from bundle
  NSString *image = @"progressIndicator.bundle/37x-Checkmark.png";
@@ -399,7 +399,7 @@
     NSString* text = [command.arguments objectAtIndex:0];
     
     // update indicator with text
-    self.progressIndicator.labelText = text;
+    self.progressIndicator.label.text = text;
     
     CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
@@ -428,7 +428,7 @@
 		[self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 		return;
 	}
-	[self.progressIndicator hide:YES];
+	[self.progressIndicator hideAnimated:YES];
     self.progressIndicator = nil;
     CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];

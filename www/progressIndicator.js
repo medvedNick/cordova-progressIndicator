@@ -88,6 +88,13 @@ var ProgressIndicator = {
     cordova.exec(null, null, "ProgressIndicator", "showText", [dim, label, position]);
   },
 
+  setLabelText: function (text) {
+    cordova.exec(null, null, "ProgressIndicator", "setLabelText", [text]);
+  },
+
+  setProgress: function (progress) {
+    cordova.exec(null, null, "ProgressIndicator", "setProgress", [progress]);
+  },
 
   hide: function () {
     cordova.exec(null, null, "ProgressIndicator", "hide", []);
