@@ -20,6 +20,9 @@
 - (void)showSuccess:(CDVInvokedUrlCommand*)command;
 //- (void)showMultiple:(CDVInvokedUrlCommand*)command;
 
+- (void)setLabelText:(CDVInvokedUrlCommand*)command;
+- (void)setProgress:(CDVInvokedUrlCommand*)command;
+
 - (void)hide:(CDVInvokedUrlCommand*)command;
 
 - (void)progressTask:(NSNumber*)increment;
