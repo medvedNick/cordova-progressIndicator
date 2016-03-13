@@ -1,91 +1,82 @@
-var ProgressIndicator = {
-  show: function (type, dim, label, detail) {
-    dim = dim || false;
+cordova.define("org.pbernasconi.progressindicator.ProgressIndicator", function(require, exports, module) { var ProgressIndicator = {
+  show: function (type, label, detail) {
     label = label || "Please wait...";
     detail = detail || '';
 
-    cordova.exec(null, null, "ProgressIndicator", "show", [type, dim, label, detail]);
+    cordova.exec(null, null, "ProgressIndicator", "show", [type, label, detail]);
   },
 
 
-  showSimple: function (dim) {
-    dim = dim || false;
-    cordova.exec(null, null, "ProgressIndicator", "showSimple", [dim]);
+  showSimple: function () {
+    cordova.exec(null, null, "ProgressIndicator", "showSimple", []);
 
   },
 
-  showSimpleWithLabel: function (dim, label) {
-    dim = dim || false;
+  showSimpleWithLabel: function (label) {
     label = label || "Please wait...";
 
-    cordova.exec(null, null, "ProgressIndicator", "showSimpleWithLabel", [dim, label]);
+    cordova.exec(null, null, "ProgressIndicator", "showSimpleWithLabel", [label]);
   },
 
-  showSimpleWithLabelDetail: function (dim, label, detail) {
-    dim = dim || false;
+  showSimpleWithLabelDetail: function (label, detail) {
+
     label = label || "Please wait...";
     detail = detail || "Loading";
 
-    cordova.exec(null, null, "ProgressIndicator", "showSimpleWithLabelDetail", [dim, label, detail]);
+    cordova.exec(null, null, "ProgressIndicator", "showSimpleWithLabelDetail", [label, detail]);
   },
 
-  showDeterminate: function (dim, timeout) {
-    dim = dim || false;
-    timeout = timeout || 50000;
-    cordova.exec(null, null, "ProgressIndicator", "showDeterminate", [dim, timeout]);
+  showDeterminate: function () {
+
+    cordova.exec(null, null, "ProgressIndicator", "showDeterminate", []);
   },
 
-  showDeterminateWithLabel: function (dim, timeout, label) {
-    dim = dim || false;
-    timeout = timeout || 50000;
+  showDeterminateWithLabel: function (label) {
+
     label = label || "Please wait...";
 
-    cordova.exec(null, null, "ProgressIndicator", "showDeterminateWithLabel", [dim, timeout, label]);
+    cordova.exec(null, null, "ProgressIndicator", "showDeterminateWithLabel", [label]);
   },
 
-  showAnnular: function (dim, timeout) {
-    dim = dim || false;
-    timeout = timeout || 50000;
-    cordova.exec(null, null, "ProgressIndicator", "showDeterminateAnnular", [dim, timeout]);
+  showAnnular: function () {
+
+    cordova.exec(null, null, "ProgressIndicator", "showDeterminateAnnular", []);
   },
 
-  showAnnularWithLabel: function (dim, timeout, label) {
-    dim = dim || false;
-    timeout = timeout || 50000;
+  showAnnularWithLabel: function (label) {
+
     label = label || "Please wait...";
 
-    cordova.exec(null, null, "ProgressIndicator", "showDeterminateAnnularWithLabel", [dim, timeout, label]);
+    cordova.exec(null, null, "ProgressIndicator", "showDeterminateAnnularWithLabel", [label]);
   },
 
-  showBar: function (dim, timeout) {
-    dim = dim || false;
-    timeout = timeout || 50000;
+  showBar: function () {
 
-    cordova.exec(null, null, "ProgressIndicator", "showDeterminateBar", [dim, timeout]);
+
+    cordova.exec(null, null, "ProgressIndicator", "showDeterminateBar", []);
   },
 
-  showBarWithLabel: function (dim, timeout, label) {
-    dim = dim || false;
-    timeout = timeout || 50000;
+  showBarWithLabel: function (label) {
+
     label = label || "Please wait...";
 
-    cordova.exec(null, null, "ProgressIndicator", "showDeterminateBarWithLabel", [dim, timeout, label]);
+    cordova.exec(null, null, "ProgressIndicator", "showDeterminateBarWithLabel", [label]);
   },
 
 
-  showSuccess: function (dim, label) {
-    dim = dim || false;
+  showSuccess: function (label) {
+
     label = label || "Success";
 
-    cordova.exec(null, null, "ProgressIndicator", "showSuccess", [dim, label]);
+    cordova.exec(null, null, "ProgressIndicator", "showSuccess", [label]);
   },
 
-  showText: function (dim, label, position) {
-    dim = dim || false;
+  showText: function (label, position) {
+
     label = label || "Success";
     position = position || "bottom";
 
-    cordova.exec(null, null, "ProgressIndicator", "showText", [dim, label, position]);
+    cordova.exec(null, null, "ProgressIndicator", "showText", [label, position]);
   },
 
   setLabelText: function (text) {
@@ -102,3 +93,4 @@ var ProgressIndicator = {
 };
 
 module.exports = ProgressIndicator;
+});

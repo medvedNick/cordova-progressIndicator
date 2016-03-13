@@ -20,15 +20,11 @@
     self.progressIndicator = nil;
     self.progressIndicator = [MBProgressHUD showHUDAddedTo:self.webView.superview animated:YES];
     self.progressIndicator.mode = MBProgressHUDModeIndeterminate;
-    
-    // Check if dim : true ? false
-    if (dim == true) {
-        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleBlur;
-    }
+	
+    self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleSolidColor;
     
     // Cordova success
-    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+	[self returnOkPluginResultForCommand:command];
 }
 
 
@@ -52,13 +48,9 @@
     //self.progressIndicator.color =  [UIColor color:color];
     //HUD.color = [UIColor colorWithRed:0.23 green:0.50 blue:0.82 alpha:0.90];
     
-    // Check if dim : true ? false
-    if (dim == true) {
-        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleBlur;
-    }
+    self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleSolidColor;
     
-    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+	[self returnOkPluginResultForCommand:command];
     
 }
 
@@ -85,11 +77,10 @@
     
     // Check for dim : true ? false
     if (dim == true) {
-        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleBlur;
+        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleSolidColor;
     }
     
-    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+	[self returnOkPluginResultForCommand:command];
 }
 
 
@@ -130,11 +121,10 @@
     
     // Check for dim : true ? false
     if (dim == true) {
-        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleBlur;
+        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleSolidColor;
     }
     
-    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+	[self returnOkPluginResultForCommand:command];
     
 }
 
@@ -160,14 +150,12 @@
     
     // Check for dim : true ? false
     if (dim == true) {
-        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleBlur;
+        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleSolidColor;
     }
     
-    // Load Progress bar with ::incrementValue
-    [self.progressIndicator showWhileExecuting:@selector(progressTask:) onTarget:self withObject:incrementValue animated:YES];
+    [self.progressIndicator showAnimated:YES];
     
-    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+	[self returnOkPluginResultForCommand:command];
 }
 
 
@@ -192,14 +180,12 @@
     
     // Check for dim : true ? false
     if (dim == true) {
-        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleBlur;
+        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleSolidColor;
     }
     
-    // Load Progress bar with ::incrementValue
-    [self.progressIndicator showWhileExecuting:@selector(progressTask:) onTarget:self withObject:incrementValue animated:YES];
+    [self.progressIndicator showAnimated:YES];
     
-    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+	[self returnOkPluginResultForCommand:command];
 }
 
 
@@ -222,14 +208,12 @@
     
     // Check for dim : true ? false
     if (dim == true) {
-        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleBlur;
+        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleSolidColor;
     }
     
-    // Load Progress bar with ::incrementValue
-    [self.progressIndicator showWhileExecuting:@selector(progressTask:) onTarget:self withObject:incrementValue animated:YES];
+    [self.progressIndicator showAnimated:YES];
     
-    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+	[self returnOkPluginResultForCommand:command];
 }
 
 
@@ -253,14 +237,12 @@
     
     // Check for dim : true ? false
     if (dim == true) {
-        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleBlur;
+        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleSolidColor;
     }
     
-    // Load Progress bar with ::incrementValue
-    [self.progressIndicator showWhileExecuting:@selector(progressTask:) onTarget:self withObject:incrementValue animated:YES];
+    [self.progressIndicator showAnimated:YES];
     
-    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+	[self returnOkPluginResultForCommand:command];
 }
 
 
@@ -284,14 +266,12 @@
     
     // Check for dim : true ? false
     if (dim == true) {
-        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleBlur;
+        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleSolidColor;
     }
     
-    // Load Progress bar with ::incrementValue
-    [self.progressIndicator showWhileExecuting:@selector(progressTask:) onTarget:self withObject:incrementValue animated:YES];
+    [self.progressIndicator showAnimated:YES];
     
-    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+	[self returnOkPluginResultForCommand:command];
 }
 
 
@@ -317,14 +297,12 @@
     
     // Check for dim : true ? false
     if (dim == true) {
-        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleBlur;
+        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleSolidColor;
     }
     
-    // Load Progress bar with ::incrementValue
-    [self.progressIndicator showWhileExecuting:@selector(progressTask:) onTarget:self withObject:incrementValue animated:YES];
+    [self.progressIndicator showAnimated:YES];
     
-    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+	[self returnOkPluginResultForCommand:command];
 }
 
 
@@ -351,47 +329,11 @@
     
     // Check for dim : true ? false
     if (dim == true) {
-        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleBlur;
+        self.progressIndicator.backgroundView.style = MBProgressHUDBackgroundStyleSolidColor;
     }
     
-    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+	[self returnOkPluginResultForCommand:command];
 }
-
-
-
-/**
- * MULTIPLE STEPS using array
- 
- 
- - (void)showMultiple:(CDVInvokedUrlCommand*)command {
- 
- // obtain commands
- bool dim = [[command.arguments objectAtIndex:0] boolValue];
- NSArray = [commands.arguments objectAtIndex:1];
- 
- 
- // initialize indicator with options, text, detail
- self.progressIndicator = nil;
- self.progressIndicator = [MBProgressHUD showHUDAddedTo:self.webView.superview animated:YES];
- self.progressIndicator.mode = MBProgressHUDModeCustomView;
- self.progressIndicator.label.text = text;
- 
- // custom success image from bundle
- NSString *image = @"progressIndicator.bundle/37x-Checkmark.png";
- self.progressIndicator.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:image]];
- 
- 
- // Check for dim : true ? false
- if (dim == true) {
- self.progressIndicator.dimBackground = YES;
- }
- 
- CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
- [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
- 
- }
- */
 
 - (void)setLabelText:(CDVInvokedUrlCommand*)command
 {
@@ -401,8 +343,7 @@
     // update indicator with text
     self.progressIndicator.label.text = text;
     
-    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+	[self returnOkPluginResultForCommand:command];
 }
 
 - (void)setProgress:(CDVInvokedUrlCommand*)command
@@ -413,8 +354,7 @@
     // update indicator with progress
     self.progressIndicator.progress = progress;
     
-    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+	[self returnOkPluginResultForCommand:command];
 }
 
 /**
@@ -430,29 +370,13 @@
 	}
 	[self.progressIndicator hideAnimated:YES];
     self.progressIndicator = nil;
-    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+
+	[self returnOkPluginResultForCommand:command];
 }
 
-
-
-/**
- * PROGRESS TASK EVENT
- */
-
-- (void)progressTask:(NSNumber *)increment{
-    
-    // get increment value
-    int _increment = [increment intValue];
-    
-    float progress = 0.0f;
-    while (progress < 1.0f) {
-        progress += 0.01f;
-        self.progressIndicator.progress = progress;
-        
-        // increment in microseconds (100000mms = 1s)
-        usleep(_increment);
-    }
+- (void)returnOkPluginResultForCommand:(CDVInvokedUrlCommand *)command
+{
+	[self returnOkPluginResultForCommand:command];
 }
 
 @end
