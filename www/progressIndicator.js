@@ -1,4 +1,5 @@
-cordova.define("org.pbernasconi.progressindicator.ProgressIndicator", function(require, exports, module) { var ProgressIndicator = {
+cordova.define("org.pbernasconi.progressindicator.ProgressIndicator", function(require, exports, module) {
+ var ProgressIndicator = {
   show: function (type, label, detail) {
     label = label || "Please wait...";
     detail = detail || '';

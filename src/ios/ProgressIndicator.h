@@ -25,6 +25,4 @@
 
 - (void)hide:(CDVInvokedUrlCommand*)command;
 
-- (void)progressTask:(NSNumber*)increment;
-
 @end
