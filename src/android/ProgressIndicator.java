@@ -34,8 +34,18 @@ public class ProgressIndicator extends CordovaPlugin {
             return true;
         } else if (action.equals("showText")) {
             String title = args.getString(1);
-			String text = args.getString(2);
+            String text = args.getString(2);
             show(title, text, false);
+            callbackContext.success();
+            return true;
+        } else if (action.equals("showDeterminateBarWithLabel")) {
+            String title = args.getString(0);
+            show(title);
+            callbackContext.success();
+            return true;
+        } else if (action.equals("setProgress")) {
+            Double progress = args.getDouble(0);
+            setProgress(progress);
             callbackContext.success();
             return true;
         } else if (action.equals("hide")) {
@@ -51,8 +61,6 @@ public class ProgressIndicator extends CordovaPlugin {
 
     /**
      * This show the ProgressDialog
-     *
-     * @param text - Message to display in the Progress Dialog
      */
     public void show() {
         progressIndicator = new ProgressDialog(cordova.getActivity());
@@ -67,13 +75,15 @@ public class ProgressIndicator extends CordovaPlugin {
     public void show(String text) {
         progressIndicator = new ProgressDialog(cordova.getActivity());
 		progressIndicator.setTitle(text);
+        progressIndicator.setCancelable(false);
+        progressIndicator.setCanceledOnTouchOutside(false);
 		progressIndicator.show();
     }
 
     /**
      * This show the ProgressDialog
      *
-     * @param text - Message to display in the Progress Dialog
+     * @param title - Message to display in the Progress Dialog
      */
     public void show(String title, String detail, Boolean withTitle) {
         progressIndicator = new ProgressDialog(cordova.getActivity());
@@ -81,6 +91,10 @@ public class ProgressIndicator extends CordovaPlugin {
 			progressIndicator.setTitle(title);
 		progressIndicator.setMessage(detail);
 		progressIndicator.show();
+    }
+
+    public void setProgress(Double progress) {
+        progressIndicator.setProgress((int) (progress * 100));
     }
 
     /**
